@@ -1,6 +1,13 @@
 #!/bin/bash
-echo "Patrick Toms," # kuvab minu nime
-echo  "ISP 217"  # kuvab minu õppegrupi järgmisele reale
-echo "Antud aine tundub väga huvitav." #kuvab järgmisele reale antud lause
-echo "Hetkel tundub aine lihtne ja ma suudan piisavalt kiiresti kaasa teha." # kuvab järgmisele reale antud lause 
-# skriptilõpp
+#
+#kasutaja tervitus
+#
+#skripti algus
+#
+# echo "Tere User!"
+echo -n "Tere "
+echo -n `whoami | cut -c1 | tr [:lower:] [:upper:]` # lõika esimene täht ja muuda suureks
+echo -n `whoami | cut -c2-` # lõika kõik täähed alates 2-st
+echo "!"
+#
+#skripti lopp
