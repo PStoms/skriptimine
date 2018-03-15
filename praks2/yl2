@@ -3,11 +3,9 @@
 #kasutaja tervitus
 #
 #skripti algus
-#
-# echo "Tere User!"
-echo -n "Tere "
-echo -n `whoami | cut -c1 | tr [:lower:] [:upper:]` # lõika esimene täht ja muuda suureks
-echo -n `whoami | cut -c2-` # lõika kõik täähed alates 2-st
-echo "!"
+who | cut -f1 -d" " | cut -f2 -d "." > eesnimi # lõikame perenimi - see on 2. element peale punkti ja salvestame faili
+who | cut -f1 -d" " | cut -f2 -d "." > perenimi # lõikame eesnimi - see on 1. element ennem punkti ja salvestame faili
+paste -d"." eesnimi perenimi > nimed #kleebime need failid vastavas järjekorras
+cat nimed | sort | uniq # sorteerime väljundi ja võtame korduvad välja
 #
 #skripti lopp
