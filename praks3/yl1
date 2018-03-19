@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+#kuupäeva ja kalendri väljastamine
+#
+#skripti algus
+#
+echo Today is `date '+%d.%m.%y'`
+echo Time is `date '+%H:%M:%S'`
+cal
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
