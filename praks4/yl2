@@ -1,0 +1,56 @@
+#!/bin/bash
+#
+#küpsise kalkulaator
+#
+#algus
+#
+#kandiku andmed
+#
+echo -n "Sisesta kandiku pikkused ja laius (cm):"
+read k_pikkus k_laius
+#
+#küpsise andmed
+#
+echo -n "sisesta küpsise pikkus ja laius (cm):"
+read ky_pikkus ky_laius
+echo -n "Sisesta kypsiste arv pakis (tk):"
+read pakis
+#
+#kihtide arv
+#
+echo -n "sisesta tordi kihtide arv (number):"
+read kihid
+#
+#arvutused
+#
+#kandiku pindala
+#
+kandik=`expr $k_pikkus \* $k_laius`
+#
+#kypsise pindala
+#
+kypsis=`expr $ky_pikkus \* $ky_laius`
+#
+#palju kypsist mahub
+#
+yhes_kihis=`expr $kandik \* $kypsis`
+#
+#kokku kypsiseid
+#
+kypsised=`expr $yhes_kihis / $kihid`
+#
+#pakkide arv
+#
+pakk_arv=`expr $kypsised / $pakis`
+#
+#jaak
+#
+jaak=`expr $kypsised % $pakis`
+#
+#väljastamine
+#
+echo kokku on vaja $pakk_arv pakki ja üle jääb veel $jaak kypsist
+#
+#lopp 
+
+
