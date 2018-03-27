@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#ekskursiooni korraldamise abi
+#
+#algus
+#
+echo -n "Sisestage reisiate arv: "
+read inimesed
+echo -n "Sisestage bussi istekohtade arv: "
+read istekohad
+#
+#mitu bussi täidetakse
+#
+bus_arv=`expr $inimesed / $istekohad`
+#
+#mitu inimest jäävad maha
+#
+maha_jaab=`expr $inimesed % $istekohad`
+#
+#vastuse väljastamine
+#
+echo "Täielikult täidetakse $bus_arv bussi ja maha jääb $maha_jaab inimest"
+#
+#lopp
