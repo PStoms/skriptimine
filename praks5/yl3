@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#reisilt naasemise aeg
+#
+#algus
+#
+echo "pyhapaev - 0, esmaspaev -1, ..., laupaev - 6"
+#andmed
+echo -n "Sisesta väljumise aeg: "
+read reisi_algus
+#reisi kestvus
+echo -n "sisesta reisi kestvus"
+read paevad
+#
+#arvutused
+#
+#
+veel_reisi_paevad=$(($paevad % 7))
+#naasemis paev
+tagasi=$(($reisi_algus + $veel_reisi_paevad))
+#tulemused
+echo "Tagasi olete päeval number $tagasi"
