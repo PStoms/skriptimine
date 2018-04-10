@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#hüpotenuus
+#
+#külje väärtused
+echo -n "Sisesta a külje väärtus "
+read a
+echo -n "Sisesta b külje väärtus "
+read b
+#
+#arvutused ühes valemis
+#
+c=`echo "scale=2;sqrt($((($a * $a) + ($b * $b))))" | bc`
+#väljastamine
+echo "c = $c"
