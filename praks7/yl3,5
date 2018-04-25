@@ -1,0 +1,17 @@
++#!/bin/bash
++#
++#
++#
++echo "Sisestage präegune kellaaeg (tundides)"
++read aeg
++if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
++	echo "Liiga vara, $USER"
++elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then
++	echo "Täpselt paras aeg tööd teha, $USER"
++elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then
++	echo "Telekat vaatama, präegu head filmid, $USER"
++elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6]; then
++	echo "Käi magama, $USER"
++else
++	echo "Õpi aega tundides sisestama, $USER"
++fi
