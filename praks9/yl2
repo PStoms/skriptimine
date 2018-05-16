@@ -1,10 +1,15 @@
 #!/bin/bash
-for (( i = 1; i <= 5; i++ ))          ### Outer for loop ###
-do
-        for (( j = 1 ; j <= 1; j++ )) ### Inner for loop ###
-        do
-                echo -n "$i "
-     done
-   echo "***"
-done
-
+#
+#tärnide väljastamine
+echo -n "Sisesta ridade arv: "
+read r
+echo -n "Sisesta tärnide arv reas: "
+read t
+for (( i = 1; i <= $r; i++ ))
+	do
+		for (( j = 1; j <= $t; j++ ))
+			do
+				echo -n "*"
+		done
+		echo ""
+	done
