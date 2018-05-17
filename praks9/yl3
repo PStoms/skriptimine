@@ -1,0 +1,27 @@
+#!/bin/bash
+#skripti algus
+echo -n "Mitme tärni pikkust serva on vaja? "
+read t
+for (( i = 1; i <= 5; i++ ))
+do
+if (( $i == 1 || $i == 5))
+then
+echo -n $i". "
+        for (( j = 1; j <= $t; j++ ))
+        do
+                echo -n "*"
+        done
+        echo ""
+else
+echo -n $i". "
+echo -n "*"
+        for (( q = 2; q <$t; q++ ))
+        do
+        echo -n " "
+        done
+echo "*"
+fi
+
+done
+
+
